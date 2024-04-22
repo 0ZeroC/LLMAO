@@ -1794,6 +1794,7 @@ public abstract class AbstractCategoryItemRenderer extends AbstractRenderer
         }
         int index = this.plot.getIndexOf(this);
         CategoryDataset dataset = this.plot.getDataset(index);
+        //这里应该是dataset = null，如果数据集为 null，则返回空的图例集合。如果数据集为空，没有数据可以用来生成图例
         if (dataset != null) {
             return result;
         }
